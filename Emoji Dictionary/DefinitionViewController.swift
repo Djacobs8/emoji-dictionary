@@ -15,6 +15,8 @@ class DefinitionViewController: UIViewController {
     @IBOutlet weak var emojiLabel: UILabel!
     
     var emoji = "NO EMOJI"
+    @IBOutlet weak var birthLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +24,35 @@ class DefinitionViewController: UIViewController {
         // Do any additional setup after loading the view.
         emojiLabel.text = emoji
         
-        if emoji == "😀" { definitionLabel.text = "This is a smiley face"}
-        if emoji == "😞" { definitionLabel.text = "This is a sad face"}
-        if emoji == "😍" { definitionLabel.text = "This is a smiley face with heart-eyes"}
-        if emoji == "😸" { definitionLabel.text = "This is a super happy pussy"}
-        if emoji == "💩" { definitionLabel.text = "This is a smiley shit"}
-        if emoji == "🙈" { definitionLabel.text = "This is a guilty monkey"}
-        if emoji == "🐙" { definitionLabel.text = "This is an octopus"}
+        if emoji == "😀" {
+            definitionLabel.text = "This is a smiley face"
+            categoryLabel.text = "Category: Smiley"
+            birthLabel.text = "Origination: 2010 "
+        }
+        if emoji == "😞" {
+            definitionLabel.text = "This is a sad face"
+            categoryLabel.text = "Category: Smiley"
+            birthLabel.text = "Origination: 2010"}
+        if emoji == "😍" {
+            definitionLabel.text = "This is a smiley face with heart-eyes"
+            categoryLabel.text = "Category: Smiley"
+            birthLabel.text = "Origination: 2015"}
+        if emoji == "😸" {
+            definitionLabel.text = "This is a super happy pussy"
+            categoryLabel.text = "Category: Animal Thing"
+            birthLabel.text = "Origination: 2009"}
+        if emoji == "💩" {
+            definitionLabel.text = "This is a smiley shit"
+            categoryLabel.text = "Category: Smiley Thing"
+            birthLabel.text = "Origination: 2012"}
+        if emoji == "🙈" {
+            definitionLabel.text = "This is a guilty monkey"
+            categoryLabel.text = "Category: Animal thing"
+            birthLabel.text = "Origination: 2014"}
+        if emoji == "🐙" {
+            definitionLabel.text = "This is an octopus"
+            categoryLabel.text = "Category: Animal Thing"
+            birthLabel.text = "Origination: 2016"}
     }
 
     override func didReceiveMemoryWarning() {

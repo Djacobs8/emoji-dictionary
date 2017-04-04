@@ -63,7 +63,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a smiley face" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Z1-77-b3a">
-                                <rect key="frame" x="83.5" y="393" width="153" height="21"/>
+                                <rect key="frame" x="83.5" y="363" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Smiley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUw-Js-I1S">
+                                <rect key="frame" x="95" y="404" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origination: 2010" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLl-DB-64l">
+                                <rect key="frame" x="94.5" y="445" width="131" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,13 +83,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uLl-DB-64l" firstAttribute="top" secondItem="JUw-Js-I1S" secondAttribute="bottom" constant="20" id="O72-49-yvJ"/>
+                            <constraint firstItem="uLl-DB-64l" firstAttribute="centerX" secondItem="XJ1-UJ-gHa" secondAttribute="centerX" id="b3b-Pw-hDJ"/>
                             <constraint firstItem="Pt7-DG-qpm" firstAttribute="centerX" secondItem="XJ1-UJ-gHa" secondAttribute="centerX" id="edB-dN-dF2"/>
-                            <constraint firstItem="5Z1-77-b3a" firstAttribute="top" secondItem="Pt7-DG-qpm" secondAttribute="bottom" constant="50" id="fDt-pY-B2a"/>
+                            <constraint firstItem="5Z1-77-b3a" firstAttribute="top" secondItem="Pt7-DG-qpm" secondAttribute="bottom" constant="20" id="fDt-pY-B2a"/>
                             <constraint firstItem="Pt7-DG-qpm" firstAttribute="top" secondItem="U93-Rj-iTp" secondAttribute="bottom" constant="40" id="lla-Mv-PBg"/>
+                            <constraint firstItem="JUw-Js-I1S" firstAttribute="top" secondItem="5Z1-77-b3a" secondAttribute="bottom" constant="20" id="noH-xW-oW4"/>
+                            <constraint firstItem="JUw-Js-I1S" firstAttribute="centerX" secondItem="XJ1-UJ-gHa" secondAttribute="centerX" id="rnN-6U-5Z0"/>
                             <constraint firstItem="5Z1-77-b3a" firstAttribute="centerX" secondItem="XJ1-UJ-gHa" secondAttribute="centerX" id="sqC-R6-JgI"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthLabel" destination="uLl-DB-64l" id="y0w-C6-HJL"/>
+                        <outlet property="categoryLabel" destination="JUw-Js-I1S" id="gTa-Pu-goV"/>
                         <outlet property="definitionLabel" destination="5Z1-77-b3a" id="blE-3z-KXB"/>
                         <outlet property="emojiLabel" destination="Pt7-DG-qpm" id="XcN-JO-W7w"/>
                     </connections>
