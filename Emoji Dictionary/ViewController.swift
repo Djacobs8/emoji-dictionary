@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// added table view datasource and delegate 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableview: UITableView!
@@ -23,13 +23,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return emojis.count // automatically makes table the size of array to save time
+        return emojis.count // automatically makes table the size of array to save time as it is looking for Int number of rows
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-        let cell = UITableViewCell()
+    //returning a table view cell, taking in parameters
+        let cell = UITableViewCell() //constant for a valid return value
         cell.textLabel?.text = emojis[indexPath.row] //row label is that of corresponding array
         return cell //function must have a return
     }
@@ -44,6 +44,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let defvc = segue.destination as! DefinitionViewController
         defvc.emoji = sender as! String
         //defining type it is passed as
+        //no return for this function
     }
     
     override func didReceiveMemoryWarning() {
